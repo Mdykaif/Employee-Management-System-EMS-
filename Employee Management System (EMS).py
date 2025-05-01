@@ -1,11 +1,11 @@
-from ast import While
 employee_data =  {101: {'name': 'Satya', 'age': 27, 'department': 'HR', 'salary': 50000}}
 
 
 def add_employee():
   emp_id = int(input("Generate employee id: "))
-  if emp_id in employee_data.keys():  
+  if emp_id in employee_data.keys():
     print("Employee id already exists")
+    add_employee()
   else:
     name = input("Enter employee name: ")
     age = int(input("Enter employee age: "))
